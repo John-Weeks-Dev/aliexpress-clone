@@ -18,24 +18,6 @@
 
         <div class="flex items-center justify-between pt-5">
             <ul class="w-full">
-                <li 
-                    class="
-                        relative 
-                        flex 
-                        items-center 
-                        justify-between 
-                        py-2.5 
-                        border-b 
-                        px-3 
-                        hover:bg-gray-100 
-                        cursor-pointer
-                    "
-                >
-                    <div class=" flex items-center text-[20px] font-semibold">
-                        <Icon name="ph:user-thin" size="33"/>
-                        <span class="pl-4">Account</span>
-                    </div>
-                </li>
 
                 <li 
                     @click="goTo('orders')"
@@ -102,6 +84,6 @@ const userStore = useUserStore()
 
 const goTo = (url) => {
     userStore.isMenuOverlay = false
-    return navigateTo('/' + url)
+    return navigateTo(`/${url}`)
 }
 </script>
