@@ -260,11 +260,6 @@ const pay = async () => {
         isProcessing.value = false
     } else {
         await createOrder(result.paymentIntent.id)
-        await sendEmail(result.paymentIntent.id)
-
-        userStore.cart = []
-        userStore.checkout = []
-        return navigateTo('/success')
     }
 }
 
@@ -282,6 +277,8 @@ const createOrder = async (stripeId) => {
             products: userStore.checkout
         }
     })
+
+    await sendEmail(result.paymentIntent.id)
 }
 
 const sendEmail = async (stripeId) => {
@@ -293,6 +290,11 @@ const sendEmail = async (stripeId) => {
             toEmail: user.value.email
         }
     })
+
+    userStore.cart = []
+    userStore.checkout = []
+    
+    return navigateTo('/success')
 }
 
 const showError = (errorMsgText) => {
