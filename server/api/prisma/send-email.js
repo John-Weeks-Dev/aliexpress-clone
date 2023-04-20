@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer'
+var nodemailer = require('nodemailer')
 
 export default defineEventHandler(async (event) => {
     const body = await readBody(event)
