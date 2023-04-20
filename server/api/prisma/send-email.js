@@ -3,6 +3,8 @@ import nodemailer from 'nodemailer'
 export default defineEventHandler(async (event) => {
     const body = await readBody(event)
 
+    console.log(process.env.MAIL_HOST)
+
     var transporter = nodemailer.createTransport({
         host: process.env.MAIL_HOST,
         port: process.env.MAIL_PORT,
