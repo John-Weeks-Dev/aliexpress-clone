@@ -1,0 +1,22 @@
+https://supabase.com/docs/reference/cli/introduction
+https://supabase.com/docs/guides/auth/social-login/auth-google
+https://supabase.com/docs/guides/auth/social-login/auth-github
+
+https://mailtrap.io/
+https://github.com/settings/developers
+https://cloud.google.com
+
+https://www.prisma.io/docs/guides/migrate/seed-database?query=eed&page=1
+
+
+// Reset DB
+npx prisma migrate reset
+
+// Pull from DB
+npx prisma db pull
+
+// Create DB tables 
+npx prisma migrate dev --name init
+
+npx prisma generate
+
