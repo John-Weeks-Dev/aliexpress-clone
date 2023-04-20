@@ -260,6 +260,11 @@ const pay = async () => {
         isProcessing.value = false
     } else {
         await createOrder(result.paymentIntent.id)
+        userStore.cart = []
+        userStore.checkout = []
+        setTimeout(() => {
+            return navigateTo('/success')
+        }, 500)
     }
 }
 
@@ -277,26 +282,6 @@ const createOrder = async (stripeId) => {
             products: userStore.checkout
         }
     })
-
-    await sendEmail(stripeId)
-}
-
-const sendEmail = async (stripeId) => {
-    await useFetch('/api/prisma/send-email', {
-        method: "POST",
-        body: {
-            stripeId: stripeId,
-            price: total.value,
-            toEmail: user.value.email
-        }
-    })
-
-    userStore.cart = []
-    userStore.checkout = []
-
-    setTimeout(() => {
-        return navigateTo('/success')
-    }, 500)
 }
 
 const showError = (errorMsgText) => {

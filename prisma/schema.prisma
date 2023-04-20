@@ -34,7 +34,7 @@ model Orders {
 model OrderItem {
   id         Int       @id @default(autoincrement())
   orderId    Int
-  productId  Int       @unique
+  productId  Int
   created_at DateTime? @default(now()) @db.Timestamptz(6)
   order      Orders    @relation(fields: [orderId], references: [id])
   product    Products  @relation(fields: [productId], references: [id])
@@ -47,5 +47,5 @@ model Products {
   url         String
   price       Int
   created_at  DateTime?  @default(now()) @db.Timestamptz(6)
-  orderItem   OrderItem?
+  orderItem   OrderItem[]
 }
