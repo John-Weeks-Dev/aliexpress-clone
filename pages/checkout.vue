@@ -278,7 +278,7 @@ const createOrder = async (stripeId) => {
         }
     })
 
-    await sendEmail(result.paymentIntent.id)
+    await sendEmail(stripeId)
 }
 
 const sendEmail = async (stripeId) => {
@@ -293,8 +293,10 @@ const sendEmail = async (stripeId) => {
 
     userStore.cart = []
     userStore.checkout = []
-    
-    return navigateTo('/success')
+
+    setTimeout(() => {
+        return navigateTo('/success')
+    }, 500)
 }
 
 const showError = (errorMsgText) => {
