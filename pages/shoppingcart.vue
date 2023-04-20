@@ -6,7 +6,7 @@
                     <img 
                         class="mx-auto"
                         width="250"
-                        src="cart-empty.png"
+                        src="/cart-empty.png"
                     >
 
                     <div class="text-xl text-center mt-4">No items yet? Tap below to explore</div>
