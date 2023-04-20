@@ -26,7 +26,7 @@
                     font-semibold
                 "
             >
-                <img class="w-full max-w-[30px]" src="google-logo.png">
+                <img class="w-full max-w-[30px]" src="/google-logo.png">
                 <div>Google</div>
             </button>
 
