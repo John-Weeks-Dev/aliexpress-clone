@@ -4,6 +4,7 @@ const prisma = new PrismaClient()
 export default defineEventHandler(async (event) => {
     let orders = await prisma.orders.findMany({
         where: { userId: event.context.params.userId },
+        orderBy: { createdAt: "desc" },
         include: { 
             orderItem: {
                 include: {
