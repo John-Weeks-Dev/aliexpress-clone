@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
     pages: true,
     modules: [
+        'nodemailer',
         'nuxt-icon',
         'nuxt-lodash',
         '@pinia/nuxt',
