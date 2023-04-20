@@ -228,7 +228,10 @@ const stripeInit = async () => {
             iconColor: "#EE4B2B"
         }
     };
-    card = elements.create("card", { style: style });
+    card = elements.create("card", { 
+        hidePostalCode: true, 
+        style: style 
+    });
 
     // Stripe injects an iframe into the DOM
     card.mount("#card-element");
