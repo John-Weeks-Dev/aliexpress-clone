@@ -8,9 +8,7 @@
                         width="250"
                         src="/cart-empty.png"
                     >
-
                     <div class="text-xl text-center mt-4">No items yet? Tap below to explore</div>
-
                     <button 
                         class="
                             bg-[#FD374F] 
