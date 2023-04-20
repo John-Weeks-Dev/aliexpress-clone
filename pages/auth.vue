@@ -47,7 +47,7 @@
                     font-semibold
                 "
             >
-                <img class="w-full max-w-[30px]" src="github-logo.png">
+                <img class="w-full max-w-[30px]" src="/github-logo.png">
                 <div>Github</div>
             </button>
 
