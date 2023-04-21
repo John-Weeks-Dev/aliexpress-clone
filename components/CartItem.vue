@@ -26,13 +26,13 @@
 
         <div class="overflow-hidden pl-2 w-full">
             <div class="flex items-center justify-between w-full">
-                <div class="flex items-center justify-between">
-                    <span class="bg-[#FD374F] text-white text-[9px] font-semibold px-1.5 rounded-sm min-w-[80px]">Welcome Deal</span>
+                <div class="flex items-center justify-between truncate">
+                    <span class="sm:block hidden bg-[#FD374F] text-white text-[9px] font-semibold px-1.5 rounded-sm min-w-[80px]">Welcome Deal</span>
                     <div class="truncate pl-2">{{ product.title }}</div>
                 </div>
                 <button 
                     @click="removeFromCart()"
-                    class="mx-3 -mt-0.5 hover:text-red-500"
+                    class="mx-3 sm:block hidden -mt-0.5 hover:text-red-500"
                 >
                     <Icon name="material-symbols:delete-outline" size="20" />
                 </button>
@@ -49,6 +49,15 @@
             <p class="text-[#009A66] text-xs font-semibold pt-1">
                 Free Shipping
             </p>
+
+            <div class="flex items-center justify-end">
+                <button 
+                    @click="removeFromCart()"
+                    class="sm:hidden block -mt-0.5 hover:text-red-500"
+                >
+                    <Icon name="material-symbols:delete-outline" size="20" />
+                </button>
+            </div>
         </div>
     </div>
 </template>
