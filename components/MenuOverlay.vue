@@ -76,7 +76,7 @@
 
                 <li 
                     v-if="user" 
-                    @click="client.auth.signOut()"
+                    @click="signOut()"
                     class="
                         relative 
                         flex 
@@ -109,5 +109,11 @@ const user = useSupabaseUser()
 const goTo = (url) => {
     userStore.isMenuOverlay = false
     return navigateTo(`/${url}`)
+}
+
+const signOut = () => {
+    client.auth.signOut()
+    userStore.isMenuOverlay = false
+    return navigateTo('/')
 }
 </script>
