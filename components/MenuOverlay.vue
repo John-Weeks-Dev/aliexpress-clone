@@ -73,6 +73,27 @@
                         {{ userStore.cart.length }}
                     </div>
                 </li>
+
+                <li 
+                    v-if="user" 
+                    @click="client.auth.signOut()"
+                    class="
+                        relative 
+                        flex 
+                        items-center 
+                        justify-between 
+                        py-2.5 
+                        border-b 
+                        px-3 
+                        hover:bg-gray-100 
+                        cursor-pointer
+                    "
+                >
+                    <div class=" flex items-center text-[20px] font-semibold">
+                        <Icon name="ph:pen-light" size="33"/>
+                        <span class="pl-4">Sign out</span>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -81,6 +102,9 @@
 <script setup>
 import { useUserStore } from '~/stores/user';
 const userStore = useUserStore()
+
+const client = useSupabaseClient()
+const user = useSupabaseUser()
 
 const goTo = (url) => {
     userStore.isMenuOverlay = false
