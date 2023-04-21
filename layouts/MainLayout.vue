@@ -218,9 +218,11 @@ const searchByName = useDebounce(async () => {
 
 watch(() => searchItem.value, async () => {
     if (!searchItem.value) { 
-        items.value = ''
-        isSearching.value = false
-        return
+        setTimeout(() => {
+            items.value = ''
+            isSearching.value = false
+            return
+        }, 500)
     }
     searchByName() 
 })
