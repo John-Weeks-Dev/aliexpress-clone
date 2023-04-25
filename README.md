@@ -1,42 +1,23 @@
-# Nuxt 3 Minimal Starter
+# Linktree Clone / PWA (linktree-clone)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+### Learn how to build this!
 
-## Setup
+If you'd like a step by step guide on how to build this just **CLICK THE IMAGE BELOW**
 
-Make sure to install the dependencies:
+[![GO TO JOHN WEEKS DEV TUTORIAL VIDEOS](https://user-images.githubusercontent.com/108229029/234320789-13022db7-cea3-4ee2-b9a2-ecc47d0e4347.png)](https://www.youtube.com/watch?v=NtsbjB8QD3Y)
 
-```bash
-# yarn
-yarn install
+Come and check out my YOUTUBE channel for lots more tutorials -> https://www.youtube.com/@johnweeksdev
 
-# npm
-npm install
+**LIKE**, **SUBSCRIBE**, and **SMASH THE NOTIFICATION BELL**!!!
 
-# pnpm
-pnpm install
+## App Setup (localhost)
+
 ```
+git clone https://github.com/John-Weeks-Dev/linktree-clone.git
 
-## Development Server
+npm i
 
-Start the development server on `http://localhost:3000`
-
-```bash
 npm run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+You should be good to go!
