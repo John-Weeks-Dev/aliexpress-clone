@@ -1,4 +1,4 @@
-# Linktree Clone / PWA (linktree-clone)
+# AliExpress Clone / (aliexpress-clone)
 
 ### Learn how to build this!
 
@@ -13,7 +13,7 @@ Come and check out my YOUTUBE channel for lots more tutorials -> https://www.you
 ## App Setup (localhost)
 
 ```
-git clone https://github.com/John-Weeks-Dev/linktree-clone.git
+git clone https://github.com/John-Weeks-Dev/AliExpress-clone.git
 
 cp .env.example .env
 
